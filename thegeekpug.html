@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheGeekPug</title>
+    <!-- Favicon configuration -->
+    <link rel="icon" type="image/jpeg" href="thegeekpug.jpg">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-color: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-color: #58a6ff;
+            --danger-color: #da3633;
+        }
+
+        body {
+            /* Global font set to Times New Roman */
+            font-family: "Times New Roman", Times, serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #f0f6fc;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Container and styling for the penguin link image */
+        .penguin-link {
+            display: inline-block;
+            margin: 20px 0;
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
+        .penguin-link:hover {
+            transform: scale(1.05);
+        }
+        .penguin-image {
+            width: 120px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #f0f6fc;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        /* Base dynamic cards styling */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 600;
+            transition: background-color 0.2s, border-color 0.2s, color 0.1s;
+        }
+
+        .card:hover {
+            background-color: #21262d;
+            border-color: #8b949e;
+        }
+
+        .card.user {
+            color: var(--text-color);
+            background-color: rgba(110, 118, 129, 0.1);
+        }
+
+        /* Interactive link version for contributors */
+        a.card.user {
+            color: var(--accent-color);
+            cursor: pointer;
+        }
+        a.card.user:hover {
+            background-color: #21262d;
+            border-color: #8b949e;
+        }
+
+        .card.danger {
+            color: var(--danger-color);
+            border-color: rgba(248, 81, 73, 0.4);
+        }
+        .card.danger:hover {
+            background-color: rgba(248, 81, 73, 0.1);
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.9rem;
+            z-index: 1000;
+        }
+
+        .cookie-btn {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #21262d;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 5px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .cookie-btn.accept {
+            background-color: #238636;
+            color: white;
+            border-color: rgba(240,246,252,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TheGeekPug</h1>
+        <p class="subtitle">Repository of projects, tools, and experiments</p>
+        
+        <!-- Image linked to the "Do not enter this website" notice -->
+        <a href="https://youtube.com/@tubers93II" title="Do not enter this website" class="penguin-link">
+            <img src="do not enter this website....png" alt="Do not enter this website" class="penguin-image">
+        </a>
+    </header>
+
+    <div class="container">
+        
+        <div class="section-title">Tools and Games</div>
+        <div class="grid">
+            <a href="https://youareanidiot.cc" class="card">YouAreAnIdiot</a>
+            <a href="https://youtube.com/@tubers93y" class="card">tubers93</a>
+            <a href="https://google.com" class="card">Google Prep helper</a>
+            <a href="https://youtube.com/@JexsYT" class="card">JexsYT</a>
+            <a href="https://youtube.com/@tubers93h" class="card">tubers93h</a>
+            <a href="https://tiktok.com" class="card">Tiktok</a>
+            <a href="https://youareanidiot.cc/lol.html" class="card">Idiot</a>
+            <a href="https://youtube.com/GaspiPD" class="card">Gaspi</a>
+            <a href="https://github.io" class="card">you dont know who i am</a>
+            <a href="https://youareanidiot.org" class="card">test</a>
+        </div>
+
+        <div class="section-title">Contributors</div>
+        <div class="grid">
+            <a href="https://github.io" class="card user">TheGeekPug</a>
+            <a href="http://youdontknowwhoiam.org" class="card user">do not enter this website</a>
+            <a href="https://youtube.com/@tubers93" class="card user">RJT</a>
+            <div class="card user">tubers93x</div>
+            <div class="card user">tubers93y</div>
+            <div class="card user">tubers93h</div>
+            <div class="card user">capybara930s</div>
+            <a href="https://youtube.com/@whenweleavetime" class="card user">WhenWeLeaveTime</a>
+            <div class="card user">whenweendthetime</div>
+        </div>
+
+        <div class="section-title">Sandbox / Testing Zone</div>
+        <div class="grid">
+            <a href="https://roblox.com" class="card danger">Free Robux</a>
+            <a href="https://youareanidiot-return.netlify.app" class="card danger">DO NOT PRESS</a>
+            <a href="https://youtube.com/@Capybara930s" class="card danger">sus</a>
+        </div>
+
+    </div>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <span>By visiting this website, you are accepting our cookie policy.</span>
+        <button class="cookie-btn accept" onclick="document.getElementById('cookieBanner').style.display='none'">Accept all</button>
+        <button class="cookie-btn" onclick="document.getElementById('cookieBanner').style.display='none'">Decline all</button>
+    </div>
+
+    <!-- JavaScript to generate random colors dynamically on hover -->
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Apply effect to all elements with class 'card'
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.color = getRandomColor();
+            });
+        });
+    </script>
+
+</body>
+</html>
