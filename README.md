@@ -1,2 +1,3 @@
 # lol
-Site
+Site inspired by TheGeekBoiz
+idk
